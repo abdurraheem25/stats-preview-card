@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+ background-color: hsl(233, 47%, 7%);
+  Font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  
+}
+ .main-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content:center;  
+    background-color: hsl(244, 37%, 16%);
+    width:1000px;
+    border-radius: 10px;
+    
+}
+.main-wrapper>.text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5em;
+    padding:50px;
+    font-family: "Inter", sans-serif;
+}
+.main-wrapper >.text-container>.text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1.5em;
+}
+.main-wrapper >.text-container>.text h1{
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+
+}
+span{
+    color: hsl(277, 64%, 61%);
+}
+.main-wrapper >.text-container>.text p{
+    font-weight: 400;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 15px;
+    
+}
+.main-wrapper >.text-container>.statistic-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3em;
+    margin-left: -7em; 
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+}
+ .main-wrapper >.text-container>.statistic-container h2{
+    color:hsla(0, 0%, 100%, 0.6);
+}
+.main-wrapper >.text-container>.statistic-container p{
+    color:hsl(0, 0%, 100%);
+}
+
+.main-wrapper>.image-container{
+  background-image:
+    linear-gradient(
+    hsla(277, 64%, 61%, 0.7),
+    hsla(277, 64%, 61%, 0.7)
+    ),
+    url("/stats-preview-card-component-main/images/image-header-desktop.jpg");
+  height:57vh; 
+  width:1000px;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  opacity: 1;
+  border-radius: 3px;
+}
+
+
+@media (max-width: 600px) {
+    .main-wrapper {
+        flex-direction: column-reverse;
+        width: 100%;
+        max-width: 330px;
+        height: auto;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .main-wrapper > .image-container {
+        width: 100%;
+        height: 240px;
+        flex-shrink: 0;
+        opacity: 1;
+        border-radius: 0;
+
+        background-image:
+            linear-gradient(
+                hsla(277, 64%, 61%, 0.7),
+                hsla(277, 64%, 61%, 0.7)
+            ),
+            url("/stats-preview-card-component-main/images/image-header-mobile.jpg");
+
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .main-wrapper > .text-container {
+        width: 100%;
+        padding: 32px 24px;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .main-wrapper > .text-container > .text {
+        gap: 16px;
+    }
+
+    .main-wrapper > .text-container > .text h1 {
+        font-size: 28px;
+    }
+
+    .main-wrapper > .text-container > .statistic-container {
+        flex-direction: column;
+        gap: 24px;
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-wrapper > .text-container > .statistic-container h2 {
+        color: hsl(0, 0%, 100%);
+    }
+
+    .main-wrapper > .text-container > .statistic-container p {
+        color: hsla(0, 0%, 100%, 0.6);
+        text-transform: uppercase;
+        font-size: 12px;
+        margin-top: 6px;
+    }
+}
